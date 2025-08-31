@@ -21,8 +21,10 @@ COPY .env.production .env
 RUN composer install --no-dev --optimize-autoloader
 
 # Set permissions
+RUN mkdir -p storage/logs bootstrap/cache
 RUN chmod -R 775 storage bootstrap/cache
 RUN chown -R www-data:www-data storage bootstrap/cache
+
 
 # Clear Laravel caches
 RUN php artisan config:clear
