@@ -1,11 +1,17 @@
 # Stage 1: Build Laravel app
 FROM php:8.3-fpm AS build
+RUN echo "deb http://deb.debian.org/debian stable main" > /etc/apt/sources.list
+
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
     git unzip curl libpng-dev libonig-dev libxml2-dev zip \
     && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
-
+RUN apt-get update && apt-get install -y \
+    apt-utils \
+    nginx \
+    supervisor \
+    && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
 
