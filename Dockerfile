@@ -56,6 +56,12 @@ WORKDIR /var/www
 # Set permissions
 RUN chown -R www-data:www-data /var/www
 
+# Validate Laravel public folder
+RUN test -f /var/www/public/index.php || (echo "Laravel public/index.php not found!" && exit 1)
+
+# Validate Nginx config
+RUN cat /etc/nginx/conf.d/default.conf
+
 # Expose port
 EXPOSE 80
 
