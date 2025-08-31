@@ -12,7 +12,9 @@ use App\Http\Controllers\DashboardController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get('/health', function () {
+    return response()->json(['status' => 'ok']);
+});
 Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::get('/', [DashboardController::class, 'home'])->name('home');
 Route::get('/informasi', [DashboardController::class, 'informasi'])->name('informasi');
