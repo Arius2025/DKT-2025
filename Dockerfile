@@ -33,8 +33,6 @@ RUN php artisan config:cache \
     && php artisan route:cache \
     && php artisan view:cache
 
----
-
 # Stage 2: Production image with Nginx
 FROM php:8.3-fpm-bullseye
 
