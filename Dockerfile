@@ -33,7 +33,7 @@ RUN php artisan config:cache \
     && php artisan route:cache \
     && php artisan view:cache
 
-# Stage 2: Production image with Nginx
+# Stage 2: Runtime image with Nginx
 FROM php:8.3-fpm-bullseye
 
 # Install Nginx & Supervisor
@@ -41,7 +41,7 @@ RUN apt-get update && apt-get install -y \
     nginx supervisor \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Copy app from build stage
+# Copy Laravel app from build stage
 COPY --from=build /var/www /var/www
 
 # Copy Nginx config
