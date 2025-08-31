@@ -15,6 +15,9 @@ use App\Http\Controllers\DashboardController;
 Route::get('/health', function () {
     return response()->json(['status' => 'ok']);
 });
+Route::get('/test', function () {
+    return 'Laravel is working!';
+});
 Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::get('/', [DashboardController::class, 'home'])->name('home');
 Route::get('/informasi', [DashboardController::class, 'informasi'])->name('informasi');
