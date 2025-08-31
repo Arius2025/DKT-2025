@@ -1,5 +1,4 @@
-# Stage 1: Build Laravel app
-FROM php:8.3-fpm-bullseye AS build
+FROM php:8.3-fpm-bullseye
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -33,37 +32,8 @@ RUN php artisan config:cache \
     && php artisan route:cache \
     && php artisan view:cache
 
-# Stage 2: Runtime image with Nginx
-FROM php:8.3-fpm-bullseye
-
-# Install Nginx & Supervisor
-RUN apt-get update && apt-get install -y \
-    nginx supervisor \
-    && apt-get clean && rm -rf /var/lib/apt/lists/*
-
-# Copy Laravel app from build stage
-COPY --from=build /var/www /var/www
-
-# Copy Nginx config
-COPY nginx/default.conf /etc/nginx/conf.d/default.conf
-
-# Copy Supervisor config
-COPY supervisord.conf /etc/supervisord.conf
-
-# Set working directory
-WORKDIR /var/www
-
-# Set permissions
-RUN chown -R www-data:www-data /var/www
-
-# Validate Laravel public folder
-RUN test -f /var/www/public/index.php || (echo "Laravel public/index.php not found!" && exit 1)
-
-# Validate Nginx config
-RUN cat /etc/nginx/conf.d/default.conf
-
 # Expose port
-EXPOSE 80
+EXPOSE 8000
 
-# Start services via Supervisor
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
+# Start Laravel using built-in server
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
