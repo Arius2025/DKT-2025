@@ -3,15 +3,13 @@
 @section('content')
 
 {{-- Hero Banner --}}
-<div class="position-relative mb-5">
-  <div class="ratio ratio-21x9 rounded shadow-sm overflow-hidden">
-    <img src="/images/rumah sakit dkt.jpg" alt="Rumah Sakit Baladhika Husada" class="object-fit-cover w-100 h-100" loading="lazy" style="filter: brightness(70%);">
-  </div>
-
-  <div class="position-absolute top-50 start-50 translate-middle text-center text-white px-4 py-3" style="z-index: 2;">
+<div class="hero-banner mb-5">
+  <div class="hero-banner-overlay"></div>
+  <div class="hero-banner-content text-white text-center">
     <h2 class="fw-bold display-5 text-shadow" data-aos="fade-down">Rumah Sakit Tk. III Baladhika Husada</h2>
     <p class="lead mb-0 text-shadow" data-aos="fade-up" data-aos-delay="100">Melayani BPJS, Umum, dan Anggota TNI/POLRI dengan sepenuh hati</p>
   </div>
+</div>
 
   {{-- Decorative Overlay --}}
   <div class="position-absolute top-0 start-0 w-100 h-100 bg-gradient" style="background: linear-gradient(to bottom right, rgba(25,135,84,0.3), rgba(0,0,0,0.5)); z-index: 1;"></div>

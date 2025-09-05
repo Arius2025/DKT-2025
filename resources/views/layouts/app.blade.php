@@ -16,6 +16,64 @@
 
   {{-- Custom Styles --}}
   <style>
+
+/* CSS Kustom untuk Hero Banner */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  /* Atur tinggi minimum agar ada ruang yang cukup */
+  min-height: 400px; /* Tinggi default untuk desktop */
+  background-image: url('/images/rumah sakit dkt.jpg');
+  background-size: cover; /* Pastikan gambar menutupi seluruh area */
+  background-position: center center; /* Pusatkan gambar */
+  background-repeat: no-repeat;
+  border-radius: 0.375rem; /* Sesuai dengan shadow-sm Bootstrap */
+  overflow: hidden;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important; /* Meniru shadow-sm */
+}
+
+/* Overlay untuk membuat teks lebih mudah dibaca */
+.hero-banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Warna overlay hitam transparan */
+  z-index: 1;
+}
+
+.hero-banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Pastikan teks di atas overlay */
+  width: 90%; /* Konten tidak terlalu lebar */
+  max-width: 800px; /* Batasi lebar maksimum */
+}
+
+/* Penyesuaian untuk tampilan mobile */
+@media (max-width: 767.98px) { /* Untuk ukuran layar di bawah 768px (MD breakpoint Bootstrap) */
+  .hero-banner {
+    min-height: 300px; /* Tinggi yang lebih pendek untuk mobile */
+  }
+
+  .hero-banner-content h2 {
+    font-size: 2.5rem; /* Ukuran font lebih kecil untuk judul */
+  }
+
+  .hero-banner-content p {
+    font-size: 1rem; /* Ukuran font lebih kecil untuk paragraf */
+  }
+}
+
+/* Efek shadow untuk teks */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
     body {
       background-color: #E6F4EA;
       min-height: 100vh;
