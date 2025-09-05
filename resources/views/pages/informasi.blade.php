@@ -140,7 +140,7 @@
         ['1950–1980', 'Berpindah ke Damaluwalu, Kreongan, Kalisat, dan Jl. Dr. Soebandi'],
         ['2006', 'Gedung baru dibangun oleh Mayor Ckm dr. Arifin'],
         ['2006', 'Resmi menjadi RS Tk. III Baladhika Husada'],
-        ['2023', 'Dipimpin oleh Letkol Ckm dr. Arif Puguh Santoso, Sp.PD., M.Kes']
+        ['2025', 'Dipimpin oleh Letkol Ckm dr. Zaltonys Tolombot, Sp.M']
       ] as $item)
       <div class="mb-4 position-relative">
         <span class="position-absolute top-0 start-0 translate-middle p-2 bg-success rounded-circle"></span>
@@ -180,7 +180,8 @@
           ['Letkol Ckm dr. Tri Wahyudi Sulistiyanto, Sp.B', '2016 – 2018'],
           ['Letkol Ckm dr. Maksum Pandjialam, Sp.PD', '2018 – 2021'],
           ['Letkol Ckm dr. Mahdyugi Saputra, Sp.PD., M.Kes', '2021 – 2023'],
-          ['Letkol Ckm dr. Arif Puguh Santoso, Sp.PD., M.Kes', '2023 – Sekarang']
+          ['Letkol Ckm dr. Arif Puguh Santoso, Sp.PD., M.Kes', '2023 – 2025'],
+          ['Letkol Ckm dr. Zaltonys Tolombot, Sp.M', '2025 – Sekarang']
         ] as $karumkit)
         <div class="col">
           <div class="card border-success h-100 shadow-sm">
