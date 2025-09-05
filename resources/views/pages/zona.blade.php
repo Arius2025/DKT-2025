@@ -49,12 +49,12 @@
       <div class="row g-4 justify-content-center">
         <div class="col-12 col-lg-10">
           <div class="rounded shadow-sm overflow-hidden mb-3">
-            <img src="{{ asset('images/zona/zi1.jpg') }}" alt="Grafik 1" class="w-100 rounded-top" loading="lazy">
+            <img src="{{ asset('images/Zona/zi1.jpg') }}" alt="Grafik 1" class="w-100 rounded-top" loading="lazy">
           </div>
         </div>
         <div class="col-12 col-lg-10">
           <div class="rounded shadow-sm overflow-hidden">
-            <img src="{{ asset('images/zona/zi2.jpg') }}" alt="Grafik 2" class="w-100 rounded-bottom" loading="lazy">
+            <img src="{{ asset('images/Zona/zi2.jpg') }}" alt="Grafik 2" class="w-100 rounded-bottom" loading="lazy">
           </div>
         </div>
         <div class="col-12 text-center">

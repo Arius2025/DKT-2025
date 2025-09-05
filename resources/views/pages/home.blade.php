@@ -137,18 +137,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <img src="https://via.placeholder.com/400x250" class="card-img-top object-fit-cover" alt="Berita 3">
-                        <div class="card-body">
-                            <h6 class="fw-bold">Webinar Kesehatan Gratis</h6>
-                            <p class="small text-muted mb-2">10 September 2025</p>
-                            <p class="card-text small">Ikuti webinar kesehatan gratis kami tentang pencegahan penyakit diabetes. Daftar sekarang!</p>
-                            <a href="#" class="btn btn-outline-success btn-sm">Baca Selengkapnya</a>
-                        </div>
-                    </div>
-                </div>
             </div>
+
+            
         </section>
 
         {{-- Testimoni & Galeri (Tambahan) --}}
