@@ -157,43 +157,44 @@
 
     {{-- Riwayat Karumkit --}}
     <section id="karumkit" class="mb-5">
-      <h4 class="text-success fw-bold"><i class="bi bi-person-lines-fill"></i> Riwayat Kepala Rumah Sakit</h4>
-      <div class="row row-cols-1 row-cols-md-2 g-3">
-        @foreach([
-          ['Letkol dr. Soebandi', '1945 – 1949'],
-          ['Mayor Ckm dr. Soedjono', '1959 – 1962'],
-          ['Letkol Ckm dr. Soebandi', '1963 – 1966'],
-          ['Letkol Ckm dr. Sam Pakpahan', '1966 – 1972'],
-          ['Letkol Ckm dr. Soeparto', '1972 – 1973'],
-          ['Letkol Ckm dr. Soerip', '1973 – 1977'],
-          ['Mayor Ckm dr. Suryono', '1977 – 1983'],
-          ['Letkol Ckm dr. Soetjipto', '1983 – 1986'],
-          ['Letkol Ckm dr. Basuki', '1986 – 1991'],
-          ['Mayor Ckm dr. Arifin', '1991 – 1994'],
-          ['Letkol Ckm drs. Basuki, M.S', '1994 – 1997'],
-          ['Letkol Ckm dr. Sumardi', '1997 – 2001'],
-          ['Letkol Ckm dr. Muhammad Ilyas, Sp.PD', '2001 – 2006'],
-          ['Letkol Ckm dr. Triyono', '2006 – 2008'],
-          ['Letkol Ckm dr. Trio Tangkas W.M., Sp.PD', '2008 – 2010'],
-          ['Letkol Ckm dr. Tri Wahyudi Sulistiyanto', '2010 – 2013'],
-          ['Letkol Ckm dr. A. Rusi Budi Suharto, Sp.B., MARS', '2013 – 2016'],
-          ['Letkol Ckm dr. Tri Wahyudi Sulistiyanto, Sp.B', '2016 – 2018'],
-          ['Letkol Ckm dr. Maksum Pandjialam, Sp.PD', '2018 – 2021'],
-          ['Letkol Ckm dr. Mahdyugi Saputra, Sp.PD., M.Kes', '2021 – 2023'],
-          ['Letkol Ckm dr. Arif Puguh Santoso, Sp.PD., M.Kes', '2023 – 2025'],
-          ['Letkol Ckm dr. Zaltonys Tolombot, Sp.M', '2025 – Sekarang']
-        ] as $karumkit)
-        <div class="col">
-          <div class="card border-success h-100 shadow-sm">
-            <div class="card-body">
-              <h6 class="card-title text-success fw-bold">{{ $karumkit[0] }}</h6>
-              <p class="card-text text-muted">Menjabat pada periode: <strong>{{ $karumkit[1] }}</strong></p>
-            </div>
-          </div>
+  <h4 class="text-success fw-bold"><i class="bi bi-person-lines-fill"></i> Riwayat Kepala Rumah Sakit</h4>
+  <div class="row row-cols-1 row-cols-md-2 g-3">
+    @foreach([
+      ['Letkol dr. Soebandi', 'Tahun 1946 s.d 1949'],
+      ['Mayor Cdm dr. Soedjono', 'Tahun 1959 s.d 1962'],
+      ['Mayor Cdm dr. Karno Supojo', 'Tahun 1966 s.d 1969'],
+      ['Kapten Cdm dr. Sam Pakpahan', 'Tahun 1969 s.d 1972'],
+      ['Kapten Cdm dr. Soedomo Pradono', 'Tahun 1972 s.d 1973'],
+      ['Mayor Cdm dr. Tom Uripan', 'Tahun 1973 s.d 1976'],
+      ['Mayor Cdm dr. Suryono', 'Tahun 1977 s.d 1983'],
+      ['Letkol Ckm dr. Koesnan D', 'Tahun 1983 s.d 1990'],
+      ['Mayor Ckm dr. Budiharto', 'Januari 1991 s.d April 1991'],
+      ['Mayor Ckm dr. H. Zularnain Pohan', 'Tahun 1991 s.d 1995'],
+      ['Letkol Ckm Drs. Basuki, MS', 'Tahun 1997 s.d 2001'],
+      ['Letkol Ckm dr. Bambang Haryatno, Sp. S', 'Tahun 2001 s.d 2004'],
+      ['Letkol Ckm dr. Muhammad Ilyas, Sp. An', 'Tahun 2004 s.d 2006'],
+      ['Letkol Ckm dr. Agus Sunandar, Sp. An', 'Tahun 2006 s.d 2009'],
+      ['Letkol Ckm dr. Trio Tangkas W.M, Sp. PD', 'Tahun 2009 s.d 2013'],
+      ['Letkol Ckm (K) dr. Dwi Ana Wahyuningrum', 'Februari 2013 s.d Desember 2013'],
+      ['Letkol Ckm dr. A Rusli Budi Ansyah, Sp. B., MARS', '1 Maret 2013 s.d Maret 2016'],
+      ['Letkol Ckm dr. Masri Sihombing, Sp.OT (K)., M.Kes', '1 April 2016 s.d Agustus 2018'],
+      ['Letkol Ckm dr. Maksum Pandelima, Sp.OT', '1 September 2018 s.d Januari 2021'],
+      ['Letkol Ckm dr. Mahyudi Sp.M., M.Kes', 'Januari 2021 s.d Mei 2023'],
+      ['Letkol Ckm dr. Arif Puguh Santoso, Sp.PD., M.Kes', 'Mei 2023 s.d Agustus 2025'],
+      ['Letkol Ckm dr. Zaltonys Tolombot, Sp.M', 'Agustus 2025 s.d Sekarang']
+    ] as $karumkit)
+    <div class="col">
+      <div class="card border-success h-100 shadow-sm">
+        <div class="card-body">
+          <h6 class="card-title text-success fw-bold">{{ $karumkit[0] }}</h6>
+          <p class="card-text text-muted">Menjabat pada periode: <strong>{{ $karumkit[1] }}</strong></p>
         </div>
-        @endforeach
       </div>
-    </section>
+    </div>
+    @endforeach
+  </div>
+</section>
+
 
     {{-- CTA Penutup --}}
     <div class="text-center mt-5">
