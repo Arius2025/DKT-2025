@@ -17,6 +17,109 @@
   {{-- Custom Styles --}}
   <style>
 
+/* Galeri Section */
+.galeri-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.galeri-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.galeri-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Fasilitas Section */
+.fasilitas-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.fasilitas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.fasilitas-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.fasilitas-card:hover {
+    transform: translateY(-5px);
+}
+
+.fasilitas-card i {
+    font-size: 2.5rem;
+    color: #198754;
+    margin-bottom: 1rem;
+}
+
+/* Testimoni Section */
+.testimoni-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.testimoni-slider {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.testimoni-card {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.testimoni-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimoni-card .avatar img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.testimoni-card p {
+    font-style: italic;
+    color: #555;
+}
+
+.testimoni-card h4 {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #198754;
+}
+
 /* CSS Kustom untuk Hero Banner */
 .hero-banner {
   position: relative;

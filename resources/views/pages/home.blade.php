@@ -138,10 +138,10 @@
             <section class="galeri-section">
         <h2>Galeri Kami</h2>
         <div class="galeri-grid">
-            <img src="assets/images/galeri1.jpg" alt="Galeri 1">
-            <img src="assets/images/galeri2.jpg" alt="Galeri 2">
-            <img src="assets/images/galeri3.jpg" alt="Galeri 3">
-            <img src="assets/images/galeri4.jpg" alt="Galeri 4">
+            <img src="images/fasilitas/ambulan.jpeg" alt="Galeri 1">
+            <img src="images/fasilitas/apotek.jpeg" alt="Galeri 2">
+            <img src="images/fasilitas/kamar.jpeg" alt="Galeri 3">
+            <img src="images/fasilitas/lab.jpeg" alt="Galeri 4">
         </div>
     </section>
 
