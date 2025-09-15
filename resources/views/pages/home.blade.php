@@ -151,6 +151,13 @@
             <img src="images/fasilitas/apotek.jpeg" alt="Galeri 2">
             <img src="images/fasilitas/kamar.jpeg" alt="Galeri 3">
             <img src="images/fasilitas/lab.jpeg" alt="Galeri 4">
+            <img src="images/fasilitas/poli1.jpeg" alt="Galeri 3">
+            <img src="images/fasilitas/poli2.jpeg" alt="Galeri 4">
+            <img src="images/fasilitas/poli3.jpeg" alt="Galeri 3">
+            <img src="images/fasilitas/poli4.jpeg" alt="Galeri 4">
+            <img src="images/fasilitas/poli5.jpeg" alt="Galeri 3">
+            <img src="images/fasilitas/poli6.jpeg" alt="Galeri 4">
+            <img src="images/fasilitas/poli7.jpeg" alt="Galeri 4">
         </div>
     </section>
 
