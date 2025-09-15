@@ -17,6 +17,51 @@
   {{-- Custom Styles --}}
   <style>
 
+
+.testimoni-section {
+  background: #f9fbfd;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+.testimoni-slider {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimoni-card {
+  background: #ffffff;
+  border-left: 5px solid #3498db;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 25px 20px;
+  max-width: 320px;
+  transition: transform 0.3s ease;
+}
+
+.testimoni-card:hover {
+  transform: translateY(-5px);
+}
+
+.quote {
+  font-style: italic;
+  color: #34495e;
+  margin-bottom: 15px;
+}
+
+.name {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
 /* Galeri Section */
 .galeri-section {
     text-align: center;
@@ -72,6 +117,43 @@
     font-size: 2.5rem;
     color: #198754;
     margin-bottom: 1rem;
+}
+
+.fasilitas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.fasilitas-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.fasilitas-card:hover {
+    transform: translateY(-5px);
+}
+
+.fasilitas-card i {
+    font-size: 2rem;
+    color: #198754;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.fasilitas-card img {
+    width: 100%;
+    max-width: 220px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 auto 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 /* Testimoni Section */
