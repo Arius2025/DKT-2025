@@ -112,80 +112,54 @@
         </section>
 
         {{-- Berita Terbaru (Tambahan) --}}
-        <section class="mb-5" data-aos="fade-up">
-            <h4 class="fw-bold text-success text-center mb-4">Berita Terbaru</h4>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <img src="https://via.placeholder.com/400x250" class="card-img-top object-fit-cover" alt="Berita 1">
-                        <div class="card-body">
-                            <h6 class="fw-bold">Pembukaan Poli Anak & Gizi</h6>
-                            <p class="small text-muted mb-2">20 September 2025</p>
-                            <p class="card-text small">RS Baladhika Husada kini membuka poli anak dan gizi untuk melayani pasien cilik dengan lebih optimal...</p>
-                            <a href="#" class="btn btn-outline-success btn-sm">Baca Selengkapnya</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <img src="https://via.placeholder.com/400x250" class="card-img-top object-fit-cover" alt="Berita 2">
-                        <div class="card-body">
-                            <h6 class="fw-bold">Pelayanan 24 Jam IGD</h6>
-                            <p class="small text-muted mb-2">15 September 2025</p>
-                            <p class="card-text small">Layanan IGD kami kini tersedia 24 jam dengan tim medis siaga untuk keadaan darurat medis...</p>
-                            <a href="#" class="btn btn-outline-success btn-sm">Baca Selengkapnya</a>
-                        </div>
-                    </div>
-                </div>
+          <section class="fasilitas-section">
+        <h2>Fasilitas Kami</h2>
+        <div class="fasilitas-grid">
+            <div class="fasilitas-card">
+                <i class="fas fa-ambulance"></i>
+                <h3>IGD 24 Jam</h3>
+                <p>Pelayanan gawat darurat yang siap siaga 24 jam dengan tim medis terlatih.</p>
             </div>
-
-            
-        </section>
+            <div class="fasilitas-card">
+                <i class="fas fa-x-ray"></i>
+                <h3>Radiologi Canggih</h3>
+                <p>Dilengkapi dengan peralatan x-ray, USG, dan CT Scan terbaru.</p>
+            </div>
+            <div class="fasilitas-card">
+                <i class="fas fa-bed"></i>
+                <h3>Rawat Inap Nyaman</h3>
+                <p>Ruang rawat inap yang bersih, nyaman, dan didukung perawat profesional.</p>
+            </div>
+        </div>
+    </section>
 
         {{-- Testimoni & Galeri (Tambahan) --}}
         <div class="row g-4 mb-5">
-            <div class="col-md-6" data-aos="fade-right">
-                <h4 class="fw-bold text-success text-center mb-4">Testimoni Pasien</h4>
-                <div id="testimonialCarousel" class="carousel slide bg-light rounded shadow-sm p-4" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active text-center">
-                            <i class="bi bi-quote fs-1 text-success"></i>
-                            <p class="lead fst-italic">"Pelayanan di sini sangat ramah dan profesional. Saya merasa nyaman selama perawatan. Terima kasih, RS Baladhika Husada!"</p>
-                            <p class="fw-semibold mt-3">- Budi Santoso</p>
-                        </div>
-                        <div class="carousel-item text-center">
-                            <i class="bi bi-quote fs-1 text-success"></i>
-                            <p class="lead fst-italic">"Dokter dan perawat sangat informatif. Saya jadi lebih memahami kondisi kesehatan saya. Sangat direkomendasikan!"</p>
-                            <p class="fw-semibold mt-3">- Ibu Siti</p>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon bg-success rounded-circle" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon bg-success rounded-circle" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
+            <section class="galeri-section">
+        <h2>Galeri Kami</h2>
+        <div class="galeri-grid">
+            <img src="assets/images/galeri1.jpg" alt="Galeri 1">
+            <img src="assets/images/galeri2.jpg" alt="Galeri 2">
+            <img src="assets/images/galeri3.jpg" alt="Galeri 3">
+            <img src="assets/images/galeri4.jpg" alt="Galeri 4">
+        </div>
+    </section>
+
+    <section class="testimoni-section">
+        <h2>Komentar Pengunjung</h2>
+        <div class="testimoni-slider">
+            <div class="testimoni-card">
+                <div class="avatar"><img src="assets/images/avatar.png" alt="Avatar"></div>
+                <p>"Pelayanannya sangat cepat dan ramah. Dokter dan perawatnya sangat membantu."</p>
+                <h4>- Bpk. Agus W.</h4>
             </div>
-            <div class="col-md-6" data-aos="fade-left">
-                <h4 class="fw-bold text-success text-center mb-4">Galeri Fasilitas</h4>
-                <div class="row g-2">
-                    <div class="col-6">
-                        <img src="https://via.placeholder.com/300" class="img-fluid rounded shadow-sm" alt="Fasilitas 1">
-                    </div>
-                    <div class="col-6">
-                        <img src="https://via.placeholder.com/300" class="img-fluid rounded shadow-sm" alt="Fasilitas 2">
-                    </div>
-                    <div class="col-6">
-                        <img src="https://via.placeholder.com/300" class="img-fluid rounded shadow-sm" alt="Fasilitas 3">
-                    </div>
-                    <div class="col-6">
-                        <img src="https://via.placeholder.com/300" class="img-fluid rounded shadow-sm" alt="Fasilitas 4">
-                    </div>
-                </div>
+            <div class="testimoni-card">
+                <div class="avatar"><img src="assets/images/avatar.png" alt="Avatar"></div>
+                <p>"Fasilitasnya lengkap dan bersih. Benar-benar merasa nyaman selama perawatan."</p>
+                <h4>- Ibu Rina S.</h4>
             </div>
+        </div>
+    </section>
         </div>
 
     </main>
