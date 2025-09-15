@@ -144,22 +144,25 @@
 
         {{-- Testimoni & Galeri (Tambahan) --}}
         <div class="row g-4 mb-5">
-            <section class="galeri-section">
-        <h2>Galeri Kami</h2>
-        <div class="galeri-grid">
-            <img src="images/fasilitas/ambulan.jpeg" alt="Galeri 1">
-            <img src="images/fasilitas/apotek.jpeg" alt="Galeri 2">
-            <img src="images/fasilitas/kamar.jpeg" alt="Galeri 3">
-            <img src="images/fasilitas/lab.jpeg" alt="Galeri 4">
-            <img src="images/fasilitas/poli1.jpeg" alt="Galeri 3">
-            <img src="images/fasilitas/poli2.jpeg" alt="Galeri 4">
-            <img src="images/fasilitas/poli3.jpeg" alt="Galeri 3">
-            <img src="images/fasilitas/poli4.jpeg" alt="Galeri 4">
-            <img src="images/fasilitas/poli5.jpeg" alt="Galeri 3">
-            <img src="images/fasilitas/poli6.jpeg" alt="Galeri 4">
-            <img src="images/fasilitas/poli7.jpeg" alt="Galeri 4">
-        </div>
-    </section>
+        <section class="galeri-section">
+  <h2>Galeri Kami</h2>
+  <div class="galeri-carousel">
+    <div class="galeri-track">
+      <img src="images/fasilitas/ambulan.jpeg" alt="Galeri 1">
+      <img src="images/fasilitas/apotek.jpeg" alt="Galeri 2">
+      <img src="images/fasilitas/kamar.jpeg" alt="Galeri 3">
+      <img src="images/fasilitas/lab.jpeg" alt="Galeri 4">
+      <img src="images/fasilitas/poli1.jpeg" alt="Galeri 5">
+      <img src="images/fasilitas/poli2.jpeg" alt="Galeri 6">
+      <img src="images/fasilitas/poli3.jpeg" alt="Galeri 7">
+      <img src="images/fasilitas/poli4.jpeg" alt="Galeri 8">
+      <img src="images/fasilitas/poli5.jpeg" alt="Galeri 9">
+      <img src="images/fasilitas/poli6.jpeg" alt="Galeri 10">
+      <img src="images/fasilitas/poli7.jpeg" alt="Galeri 11">
+    </div>
+  </div>
+</section>
+
 
     <section class="testimoni-section">
   <h2 class="section-title">💬 Komentar Pengunjung</h2>
