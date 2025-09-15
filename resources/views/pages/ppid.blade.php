@@ -55,10 +55,10 @@
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
     @foreach([
       ['https://www.youtube.com/embed/0JI0aZKU9LA', 'Jam Kunjung Pasien – RS Tk III Baladhika Husada'],
-      ['https://www.youtube.com/embed/dkERGnGThGo', 'Jam Kunjung DKT'],
-      ['https://www.tiktok.com/@rsbaladhikahusadajember/video/7479249773837438263', '144 Penyakit yang Tidak Dapat Dirujuk ke Rumah Sakit'],
-      ['https://www.youtube.com/embed/kCeqeFjCT00', 'PROFIL RUMAH SAKIT BALADHIKA HUSADA JEMBER'],
-      ['https://www.tiktok.com/@rsbaladhikahusadajember/video/7535293723622657336', 'Pelatihan BTCLS: Peningkatan Kesiapsiagaan Tenaga Medis'],
+      ['https://www.youtube.com/watch?v=3pvq9bJuRfE', '144 Penyakit yang TIDAK DAPAT DIRUJUK ke Ruman Sakit'],
+      ['https://www.youtube.com/watch?v=8EOSLgoK8vw&feature=youtu.be', 'SITERBAT (Siap Antar Obat)'],
+      ['https://www.youtube.com/watch?v=50h3kzWWPyo&feature=youtu.be', 'Layanan ambulance gratis'],
+      ['https://www.youtube.com/watch?v=1iC1Yrt1xDI', 'Kegiatan Pemeriksaan Mata dan Jantung'],
     ] as $video)
     <div class="col" data-aos="zoom-in">
       <div class="card border-0 shadow-sm hover-shadow transition h-100">
