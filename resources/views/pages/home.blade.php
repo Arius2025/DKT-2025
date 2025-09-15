@@ -17,7 +17,7 @@
             <div class="row align-items-center">
                 <div class="col-md-4 text-center mb-3 mb-md-0">
                     <div class="ratio ratio-1x1 mx-auto rounded-circle overflow-hidden shadow" style="max-width: 150px;">
-                        <img src="https://via.placeholder.com/150" alt="Kepala Rumah Sakit" class="object-fit-cover w-100 h-100" loading="lazy">
+                        <img src="images/Karumkit.png" alt="Kepala Rumah Sakit" class="object-fit-cover w-100 h-100" loading="lazy">
                     </div>
                     <p class="mt-2 fw-semibold">Letkol CKM dr. Zaltonys Tolombot, Sp.M</p>
                 </div>
