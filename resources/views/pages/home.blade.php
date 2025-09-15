@@ -117,18 +117,27 @@
         <div class="fasilitas-grid">
             <div class="fasilitas-card">
                 <i class="fas fa-ambulance"></i>
+                <img src="images/fasilitas/igd.jpeg" alt="Galeri 1">
                 <h3>IGD 24 Jam</h3>
                 <p>Pelayanan gawat darurat yang siap siaga 24 jam dengan tim medis terlatih.</p>
             </div>
             <div class="fasilitas-card">
                 <i class="fas fa-x-ray"></i>
+                <img src="images/fasilitas/rad.jpeg" alt="Galeri 1">
                 <h3>Radiologi Canggih</h3>
                 <p>Dilengkapi dengan peralatan x-ray, USG, dan CT Scan terbaru.</p>
             </div>
             <div class="fasilitas-card">
                 <i class="fas fa-bed"></i>
+                <img src="images/fasilitas/kamar.jpeg" alt="Galeri 4">
                 <h3>Rawat Inap Nyaman</h3>
                 <p>Ruang rawat inap yang bersih, nyaman, dan didukung perawat profesional.</p>
+            </div>
+            <div class="fasilitas-card">
+                <i class="fas fa-bed"></i>
+                <img src="images/fasilitas/lab.jpeg" alt="Galeri 4">
+                <h3>Labolatorium</h3>
+                <p>"Laboratorium cek NAPZA terpercaya & profesional dan didukung perawat profesional.</p>
             </div>
         </div>
     </section>
@@ -149,12 +158,12 @@
         <h2>Komentar Pengunjung</h2>
         <div class="testimoni-slider">
             <div class="testimoni-card">
-                <div class="avatar"><img src="assets/images/avatar.png" alt="Avatar"></div>
+                <div class="avatar"><img src="" alt="Avatar"></div>
                 <p>"Pelayanannya sangat cepat dan ramah. Dokter dan perawatnya sangat membantu."</p>
                 <h4>- Bpk. Agus W.</h4>
             </div>
             <div class="testimoni-card">
-                <div class="avatar"><img src="assets/images/avatar.png" alt="Avatar"></div>
+                <div class="avatar"><img src="" alt="Avatar"></div>
                 <p>"Fasilitasnya lengkap dan bersih. Benar-benar merasa nyaman selama perawatan."</p>
                 <h4>- Ibu Rina S.</h4>
             </div>
