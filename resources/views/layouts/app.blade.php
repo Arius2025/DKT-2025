@@ -1,3 +1,4 @@
+{{-- app.blade.php --}}
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -16,281 +17,294 @@
 
   {{-- Custom Styles --}}
   <style>
+/* ========================================= */
+/* UTILITY & GENERAL */
+/* ========================================= */
 
-
-.testimoni-section {
-  background: #f9fbfd;
-  padding: 60px 20px;
-  text-align: center;
+body {
+  background-color: #E6F4EA; /* Warna latar yang lebih lembut */
+  min-height: 100vh;
 }
 
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: #2c3e50;
+.transition {
+  transition: all 0.3s ease;
 }
 
-.testimoni-slider {
+/* Efek angkat dan bayangan kuat saat hover */
+.hover-shadow:hover, .card.hover-shadow:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 12px 28px rgba(0,0,0,0.2)!important; /* Bayangan lebih kuat */
+}
+
+/* Text Shadow for Hero */
+.text-shadow {
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+}
+
+/* ========================================= */
+/* NAVBAR (NEW UI/UX) */
+/* ========================================= */
+
+/* Desktop Nav Link (Pill style - lebih modern) */
+.nav-link-custom {
+    color: #343a40 !important; /* Dark text */
+    padding: 8px 15px;
+    border-radius: 50px; /* Pill shape */
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+.nav-link-custom:hover {
+    color: #145c32 !important; /* Darker hover text */
+    background-color: #e2f0e6; /* Light background on hover */
+}
+.nav-link-custom.active {
+    color: #ffffff !important; /* White text when active */
+    background-color: #198754; /* Success green background when active */
+    box-shadow: 0 4px 10px rgba(25, 135, 84, 0.4); /* Shadow for active pill */
+    font-weight: 600;
+}
+
+/* Mobile Bottom Navbar */
+.nav-link-mobile {
+    flex: 1; /* Distribute space evenly */
+    text-align: center;
+    color: #6c757d !important;
+    padding: 8px 0;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+.nav-link-mobile i {
+    font-size: 1.3rem; /* Ukuran icon */
+    margin-bottom: 2px;
+}
+
+.nav-link-mobile.active-mobile {
+    color: #198754 !important; /* Active green color */
+    font-weight: bold;
+}
+
+/* Fix main content overlap with fixed bottom nav on mobile */
+@media (max-width: 991.98px) {
+  /* Hanya diterapkan di layar mobile (ukuran < lg) */
+  body {
+    padding-bottom: 65px; /* Memberi ruang di bawah main content agar tidak tertutup fixed bottom nav */
+  }
+}
+
+/* ========================================= */
+/* HOME PAGE SECTIONS */
+/* (Styles lainnya tetap dipertahankan) */
+/* ========================================= */
+
+/* Hero Banner */
+.hero-banner {
+  height: 400px;
+  background: url('images/banner-default.jpeg') no-repeat center center/cover; /* Ganti dengan gambar banner utama Anda */
+  position: relative;
   display: flex;
-  gap: 30px;
+  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+}
+.hero-banner-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.hero-banner-content {
+  position: relative;
+  z-index: 10;
+  padding: 0 15px;
 }
 
+/* Fasilitas Grid */
+.fasilitas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.fasilitas-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.fasilitas-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.fasilitas-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Testimoni Slider/Grid */
+.testimoni-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
 .testimoni-card {
-  background: #ffffff;
-  border-left: 5px solid #3498db;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  padding: 25px 20px;
-  max-width: 320px;
-  transition: transform 0.3s ease;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #198754; /* Marker hijau */
+}
+.testimoni-card .quote {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+.testimoni-card .name {
+    font-weight: bold;
+    color: #198754;
+    font-size: 1rem;
 }
 
-.testimoni-card:hover {
-  transform: translateY(-5px);
+/* Tentang Kami - NEW PROFESSIONAL STYLE */
+.tentang-kami-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column; /* Default for mobile */
 }
 
-.quote {
-  font-style: italic;
-  color: #34495e;
-  margin-bottom: 15px;
+.tentang-kami-img {
+    background: linear-gradient(135deg, #198754, #145c32);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
 }
 
-.name {
-  font-weight: bold;
-  color: #2c3e50;
+.tentang-kami-img::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('images/rs-pattern.png') repeat; /* Tambahkan pattern lembut jika ada */
+    opacity: 0.1;
 }
+
+.karumkit-photo-wrapper {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.karumkit-photo-wrapper img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .tentang-kami-card {
+        flex-direction: row; /* Desktop/Tablet: side-by-side */
+    }
+    .tentang-kami-img, .tentang-kami-content {
+        flex: 1;
+    }
+}
+
+
+/* ========================================= */
+/* GALERI CAROUSEL (Infinite Scroll) */
+/* ========================================= */
 
 .galeri-carousel {
   overflow: hidden;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
+  position: relative;
+  background-color: #fff;
+  border-color: #eee !important;
 }
 
 .galeri-track {
   display: flex;
   gap: 20px;
-  animation: scroll 20s linear infinite;
+  animation: scroll 35s linear infinite; 
+  padding: 10px 0;
 }
 
 .galeri-track img {
-  width: 40%;
+  min-width: 300px;
+  width: 300px;
+  height: 200px;
   border-radius: 8px;
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.galeri-carousel:hover .galeri-track {
+    animation-play-state: paused;
 }
 
 @keyframes scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-50%); } 
 }
 
-/* Galeri Section */
-.galeri-section {
-    text-align: center;
-    margin-bottom: 3rem;
-}
+/* ========================================= */
+/* TIMELINE (Gaya untuk Informasi.blade.php) */
+/* ========================================= */
 
-.galeri-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
-}
-
-.galeri-grid img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.galeri-grid img:hover {
-    transform: scale(1.05);
-}
-
-/* Fasilitas Section */
-.fasilitas-section {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.fasilitas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 1rem;
-}
-
-.fasilitas-card {
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 2rem 1rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.fasilitas-card:hover {
-    transform: translateY(-5px);
-}
-
-.fasilitas-card i {
-    font-size: 2.5rem;
-    color: #198754;
-    margin-bottom: 1rem;
-}
-
-.fasilitas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 1rem;
-}
-
-.fasilitas-card {
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.fasilitas-card:hover {
-    transform: translateY(-5px);
-}
-
-.fasilitas-card i {
-    font-size: 2rem;
-    color: #198754;
-    margin-bottom: 1rem;
-    display: block;
-}
-
-.fasilitas-card img {
-    width: 100%;
-    max-width: 220px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin: 0 auto 1rem;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-/* Testimoni Section */
-.testimoni-section {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.testimoni-slider {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1rem;
-}
-
-.testimoni-card {
-    background-color: #f8f9fa;
-    border-radius: 12px;
-    padding: 1.5rem;
-    max-width: 300px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.testimoni-card:hover {
-    transform: translateY(-5px);
-}
-
-.testimoni-card .avatar img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-}
-
-.testimoni-card p {
-    font-style: italic;
-    color: #555;
-}
-
-.testimoni-card h4 {
-    margin-top: 1rem;
-    font-weight: bold;
-    color: #198754;
-}
-
-/* CSS Kustom untuk Hero Banner */
-.hero-banner {
+.timeline-list {
   position: relative;
-  width: 100%;
-  /* Atur tinggi minimum agar ada ruang yang cukup */
-  min-height: 400px; /* Tinggi default untuk desktop */
-  background-image: url('/images/rumah sakit dkt.jpg');
-  background-size: cover; /* Pastikan gambar menutupi seluruh area */
-  background-position: center center; /* Pusatkan gambar */
-  background-repeat: no-repeat;
-  border-radius: 0.375rem; /* Sesuai dengan shadow-sm Bootstrap */
-  overflow: hidden;
-  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important; /* Meniru shadow-sm */
+  padding-left: 2rem;
+  border-left: 3px solid #198754;
+  margin-top: 1.5rem;
 }
 
-/* Overlay untuk membuat teks lebih mudah dibaca */
-.hero-banner-overlay {
+.timeline-list > div {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+}
+
+.timeline-list .timeline-marker {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Warna overlay hitam transparan */
+  top: 0.5rem;
+  left: -1.1rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: #198754;
+  border-radius: 50%;
   z-index: 1;
+  box-shadow: 0 0 0 4px #E6F4EA; 
 }
 
-.hero-banner-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2; /* Pastikan teks di atas overlay */
-  width: 90%; /* Konten tidak terlalu lebar */
-  max-width: 800px; /* Batasi lebar maksimum */
+.timeline-content h6 {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #198754;
 }
 
-/* Penyesuaian untuk tampilan mobile */
-@media (max-width: 767.98px) { /* Untuk ukuran layar di bawah 768px (MD breakpoint Bootstrap) */
-  .hero-banner {
-    min-height: 300px; /* Tinggi yang lebih pendek untuk mobile */
-  }
+/* ========================================= */
+/* LOADER / SPLASH */
+/* ========================================= */
 
-  .hero-banner-content h2 {
-    font-size: 2.5rem; /* Ukuran font lebih kecil untuk judul */
-  }
-
-  .hero-banner-content p {
-    font-size: 1rem; /* Ukuran font lebih kecil untuk paragraf */
-  }
-}
-
-/* Efek shadow untuk teks */
-.text-shadow {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-
-    body {
-      background-color: #E6F4EA;
-      min-height: 100vh;
-    }
-
-    /* Splash Screen */
-    /* Splash Screen */
 #splash {
   position: fixed;
   top: 0; left: 0;
@@ -308,16 +322,6 @@
   transition: opacity 0.8s ease;
 }
 
-#splash, #loader {
-  transition: opacity 0.5s ease;
-}
-
-#splash.fade-out {
-  opacity: 0;
-  pointer-events: none;
-}
-
-/* Loader */
 #loader {
   position: fixed;
   top: 0; left: 0;
@@ -331,171 +335,11 @@
   transition: opacity 0.8s ease;
 }
 
-#loader.fade-out {
+#splash.fade-out, #loader.fade-out {
   opacity: 0;
   pointer-events: none;
 }
 
-/* Spinner Custom */
-.spinner-border {
-  width: 3rem;
-  height: 3rem;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-
-    /* Timeline, Navbar, Footer, etc... (unchanged) */
-    .timeline-list { /* ... */ }
-    .timeline-list::before { /* ... */ }
-    .timeline-item { /* ... */ }
-    .timeline-marker { /* ... */ }
-    .timeline-content { /* ... */ }
-    .hover-shadow:hover { /* ... */ }
-    .transition { /* ... */ }
-    .navbar-nav .nav-link { /* ... */ }
-    .navbar-nav .nav-link:hover { /* ... */ }
-    .navbar-nav .active-nav { /* ... */ }
-    .navbar-brand i { /* ... */ }
-    .card.hover-shadow { /* ... */ }
-    .card.hover-shadow:hover { /* ... */ }
-    .timeline {
-  border-left: 3px solid #198754;
-  padding-left: 1rem;
-}/* Timeline Section */
-#timeline {
-  background-color: #f8fcf9;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.timeline-list {
-  position: relative;
-  padding-left: 2rem;
-  border-left: 3px solid #198754; /* Bootstrap success green */
-  margin-top: 1.5rem;
-}
-
-.timeline-list li {
-  position: relative;
-  margin-bottom: 2rem;
-  padding-left: 1rem;
-}
-
-.timeline-list li span {
-  position: absolute;
-  top: 0.5rem;
-  left: -1.1rem;
-  width: 1rem;
-  height: 1rem;
-  background-color: #198754;
-  border-radius: 50%;
-  z-index: 1;
-  box-shadow: 0 0 0 4px #f8fcf9; /* white ring for contrast */
-}
-
-.timeline-content h6 {
-  margin-bottom: 0.25rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #198754;
-}
-
-.timeline-content p {
-  margin-bottom: 0;
-  font-size: 0.95rem;
-  color: #6c757d; /* Bootstrap muted */
-}
-
-/* Responsive tweaks */
-@media (max-width: 576px) {
-  .timeline-list {
-    padding-left: 1.5rem;
-  }
-
-  .timeline-list li {
-    margin-bottom: 1.5rem;
-  }
-
-  .timeline-content h6 {
-    font-size: 0.95rem;
-  }
-
-  .timeline-content p {
-    font-size: 0.9rem;
-  }
-}
-/* Timeline Section */
-.timeline-list {
-  position: relative;
-  padding-left: 2rem;
-  border-left: 3px solid #198754;
-  margin-top: 1.5rem;
-}
-
-.timeline-list > div {
-  position: relative;
-  margin-bottom: 2rem;
-  padding-left: 1rem;
-}
-
-.timeline-list span {
-  position: absolute;
-  top: 0.5rem;
-  left: -1.1rem;
-  width: 1rem;
-  height: 1rem;
-  background-color: #198754;
-  border-radius: 50%;
-  z-index: 1;
-  box-shadow: 0 0 0 4px #f8fcf9;
-}
-
-.timeline-content h6 {
-  margin-bottom: 0.25rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #198754;
-}
-
-.timeline-content p {
-  margin-bottom: 0;
-  font-size: 0.95rem;
-  color: #6c757d;
-}
-
-/* Responsive */
-@media (max-width: 576px) {
-  .timeline-list {
-    padding-left: 1.5rem;
-  }
-
-  .timeline-list > div {
-    margin-bottom: 1.5rem;
-  }
-
-  .timeline-content h6 {
-    font-size: 0.95rem;
-  }
-
-  .timeline-content p {
-    font-size: 0.9rem;
-  }
-  .text-shadow {
-  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-}
-
-}
-
-
-    [data-aos] { /* ... */ }
-    footer { /* ... */ }
-    footer a { /* ... */ }
-    footer a:hover { /* ... */ }
   </style>
 </head>
 <body>
@@ -511,7 +355,7 @@
     <div class="spinner-border text-success" role="status"></div>
   </div>
 
-  {{-- Navbar --}}
+  {{-- Navbar (Mengandung dua versi: desktop sticky top dan mobile fixed bottom) --}}
   @include('components.navbar')
 
   {{-- Main Content --}}
@@ -530,21 +374,12 @@
   <script>
     AOS.init({ once: true, offset: 100, duration: 800 });
 
-    // Highlight active nav
-    document.querySelectorAll('.nav-link').forEach(link => {
-      if (link.href === window.location.href) {
-        link.classList.add('active-nav');
-      }
-    });
-
     // Splash then Loader
     window.addEventListener('load', function () {
-    // Fade out splash first
     setTimeout(() => {
       document.getElementById('splash').classList.add('fade-out');
     }, 500);
 
-    // Then fade out loader
     setTimeout(() => {
       document.getElementById('loader').classList.add('fade-out');
     }, 1500);

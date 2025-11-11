@@ -1,29 +1,66 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top" data-aos="fade-down">
+{{-- navbar.blade.php --}}
+
+{{-- 1. Desktop Navbar (Visible on Large screens and up) - Lebih Modern --}}
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg sticky-top d-none d-lg-block" data-aos="fade-down"> 
   <div class="container">
     <a class="navbar-brand fw-bold text-success" href="{{ route('home') }}">
-      <i class="bi bi-hospital"></i> RS Baladhika Husada
+      <i class="bi bi-hospital-fill me-2 fs-4"></i> RS Baladhika Husada 
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link {{ request()->routeIs('home') ? 'active-nav' : '' }}" href="{{ route('home') }}">Beranda</a>
+    
+    {{-- Nav Links --}}
+    <div class="d-flex" id="navMenuDesktop">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> 
+        {{-- Menggunakan class nav-link-custom untuk gaya pill modern --}}
+        <li class="nav-item mx-1">
+          <a class="nav-link-custom {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Beranda</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link {{ request()->routeIs('informasi') ? 'active-nav' : '' }}" href="{{ route('informasi') }}">Informasi</a>
+        <li class="nav-item mx-1">
+          <a class="nav-link-custom {{ request()->routeIs('informasi') ? 'active' : '' }}" href="{{ route('informasi') }}">Informasi</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link {{ request()->routeIs('jadwal') ? 'active-nav' : '' }}" href="{{ route('jadwal') }}">Jadwal</a>
+        <li class="nav-item mx-1">
+          <a class="nav-link-custom {{ request()->routeIs('jadwal') ? 'active' : '' }}" href="{{ route('jadwal') }}">Jadwal</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link {{ request()->routeIs('ppid') ? 'active-nav' : '' }}" href="{{ route('ppid') }}">PPID</a>
+        <li class="nav-item mx-1">
+          <a class="nav-link-custom {{ request()->routeIs('ppid') ? 'active' : '' }}" href="{{ route('ppid') }}">PPID</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link {{ request()->routeIs('zona') ? 'active-nav' : '' }}" href="{{ route('zona') }}">Zona Integritas</a>
+        <li class="nav-item mx-1">
+          <a class="nav-link-custom {{ request()->routeIs('zona') ? 'active' : '' }}" href="{{ route('zona') }}">Zona Integritas</a>
         </li>
       </ul>
     </div>
   </div>
+</nav>
+
+{{-- 2. Mobile Bottom Navbar (Visible below Large screens) --}}
+<nav class="navbar fixed-bottom bg-white shadow-lg d-lg-none" data-aos="fade-up">
+    <div class="container-fluid">
+        <div class="d-flex justify-content-around w-100">
+            
+            {{-- Menggunakan class nav-link-mobile untuk fixed bottom nav --}}
+            <a class="nav-link-mobile {{ request()->routeIs('home') ? 'active-mobile' : '' }}" href="{{ route('home') }}">
+                <i class="bi bi-house-door-fill"></i>
+                <span class="small d-block">Beranda</span>
+            </a>
+            
+            <a class="nav-link-mobile {{ request()->routeIs('informasi') ? 'active-mobile' : '' }}" href="{{ route('informasi') }}">
+                <i class="bi bi-info-circle-fill"></i>
+                <span class="small d-block">Info</span>
+            </a>
+            
+            <a class="nav-link-mobile {{ request()->routeIs('jadwal') ? 'active-mobile' : '' }}" href="{{ route('jadwal') }}">
+                <i class="bi bi-calendar-check-fill"></i>
+                <span class="small d-block">Jadwal</span>
+            </a>
+            
+            <a class="nav-link-mobile {{ request()->routeIs('ppid') ? 'active-mobile' : '' }}" href="{{ route('ppid') }}">
+                <i class="bi bi-file-earmark-lock-fill"></i>
+                <span class="small d-block">PPID</span>
+            </a>
+            
+            <a class="nav-link-mobile {{ request()->routeIs('zona') ? 'active-mobile' : '' }}" href="{{ route('zona') }}">
+                <i class="bi bi-star-fill"></i>
+                <span class="small d-block">Z. Integritas</span>
+            </a>
+        </div>
+    </div>
 </nav>
