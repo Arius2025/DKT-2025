@@ -1,6 +1,6 @@
 {{-- navbar.blade.php --}}
 
-{{-- 1. Desktop Navbar (Visible on Large screens and up) --}}
+{{-- 1. Desktop Navbar (Sticky Top) - HANYA Muncul di layar Besar (lg dan lebih besar) --}}
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg sticky-top d-none d-lg-block" data-aos="fade-down"> 
   <div class="container">
     <a class="navbar-brand fw-bold text-success" href="{{ route('home') }}">
@@ -37,7 +37,7 @@
   </div>
 </nav>
 
-{{-- 2. Mobile Navbar (Fixed Bottom) - Visible on Small/Medium screens --}}
+{{-- 2. Mobile Navbar (Fixed Bottom) - HANYA Muncul di layar Kecil (kurang dari lg) --}}
 <nav class="nav-mobile-fixed d-lg-none">
     <div class="container-fluid">
         <div class="d-flex justify-content-around w-100">
