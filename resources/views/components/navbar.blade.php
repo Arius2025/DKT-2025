@@ -26,41 +26,40 @@
         <li class="nav-item mx-1">
           <a class="nav-link-custom {{ request()->routeIs('zona') ? 'active' : '' }}" href="{{ route('zona') }}">Zona Integritas</a>
         </li>
+        {{-- Tombol Login telah dihapus sesuai permintaan --}}
       </ul>
     </div>
   </div>
 </nav>
 
-{{-- 2. Mobile Navbar (Fixed Bottom) - HANYA Muncul di layar Kecil (kurang dari lg) --}}
-<nav class="nav-mobile-fixed d-lg-none">
-    <div class="container-fluid">
-        <div class="d-flex justify-content-around w-100">
-            
-            {{-- Menggunakan class nav-link-mobile untuk fixed bottom nav --}}
-            <a class="nav-link-mobile {{ request()->routeIs('home') ? 'active-mobile' : '' }}" href="{{ route('home') }}">
-                <i class="bi bi-house-door-fill"></i>
-                <span class="small d-block">Beranda</span>
-            </a>
-            
-            <a class="nav-link-mobile {{ request()->routeIs('informasi') ? 'active-mobile' : '' }}" href="{{ route('informasi') }}">
-                <i class="bi bi-info-circle-fill"></i>
-                <span class="small d-block">Info</span>
-            </a>
-            
-            <a class="nav-link-mobile {{ request()->routeIs('jadwal') ? 'active-mobile' : '' }}" href="{{ route('jadwal') }}">
-                <i class="bi bi-calendar-check-fill"></i>
-                <span class="small d-block">Jadwal</span>
-            </a>
-            
-            <a class="nav-link-mobile {{ request()->routeIs('ppid') ? 'active-mobile' : '' }}" href="{{ route('ppid') }}">
-                <i class="bi bi-file-earmark-lock-fill"></i>
-                <span class="small d-block">PPID</span>
-            </a>
-            
-            <a class="nav-link-mobile {{ request()->routeIs('zona') ? 'active-mobile' : '' }}" href="{{ route('zona') }}">
-                <i class="bi bi-star-fill"></i>
-                <span class="small d-block">Zona Int.</span>
-            </a>
-        </div>
+{{-- 2. Mobile Navbar (Fixed Bottom) - HANYA Muncul di layar Kecil (di bawah lg) --}}
+<nav class="fixed-bottom d-lg-none bg-white border-top shadow-lg" style="z-index: 1030;">
+    <div class="d-flex justify-content-around w-100">
+        
+        {{-- Menggunakan class nav-link-mobile untuk fixed bottom nav --}}
+        <a class="nav-link-mobile {{ request()->routeIs('home') ? 'active-mobile' : '' }}" href="{{ route('home') }}">
+            <i class="bi bi-house-door-fill"></i>
+            <span class="small d-block">Beranda</span>
+        </a>
+        
+        <a class="nav-link-mobile {{ request()->routeIs('informasi') ? 'active-mobile' : '' }}" href="{{ route('informasi') }}">
+            <i class="bi bi-info-circle-fill"></i>
+            <span class="small d-block">Info</span>
+        </a>
+        
+        <a class="nav-link-mobile {{ request()->routeIs('jadwal') ? 'active-mobile' : '' }}" href="{{ route('jadwal') }}">
+            <i class="bi bi-calendar-check-fill"></i>
+            <span class="small d-block">Jadwal</span>
+        </a>
+        
+        <a class="nav-link-mobile {{ request()->routeIs('ppid') ? 'active-mobile' : '' }}" href="{{ route('ppid') }}">
+            <i class="bi bi-file-earmark-lock-fill"></i>
+            <span class="small d-block">PPID</span>
+        </a>
+        
+        <a class="nav-link-mobile {{ request()->routeIs('zona') ? 'active-mobile' : '' }}" href="{{ route('zona') }}">
+            <i class="bi bi-star-fill"></i>
+            <span class="small d-block">ZI</span>
+        </a>
     </div>
 </nav>

@@ -95,7 +95,7 @@ body {
 .hero-section {
   position: relative;
   height: 500px; /* Tambah tinggi untuk memberi ruang bagi gambar */
-  background: url('images/hero-bg.jpg') no-repeat center center/cover;
+  background: url('images/rumah sakit dkt.jpg') no-repeat center center/cover;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
