@@ -26,12 +26,6 @@
         <li class="nav-item mx-1">
           <a class="nav-link-custom {{ request()->routeIs('zona') ? 'active' : '' }}" href="{{ route('zona') }}">Zona Integritas</a>
         </li>
-        {{-- Tombol Login --}}
-        <li class="nav-item ms-lg-3">
-            <a class="btn btn-outline-success btn-sm align-self-center fw-bold" href="/login">
-                <i class="bi bi-person-fill me-1"></i> Login
-            </a>
-        </li>
       </ul>
     </div>
   </div>
