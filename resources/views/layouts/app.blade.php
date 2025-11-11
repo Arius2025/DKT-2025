@@ -1,4 +1,3 @@
-{{-- app.blade.php --}}
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -24,6 +23,8 @@
 body {
   background-color: #E6F4EA; /* Warna latar yang lebih lembut */
   min-height: 100vh;
+  /* Tambahkan padding di bagian bawah untuk mengatasi fixed bottom mobile nav */
+  padding-bottom: 70px; /* Cukup besar untuk navbar mobile */
 }
 
 .transition {
@@ -38,291 +39,66 @@ body {
 
 /* Text Shadow for Hero */
 .text-shadow {
-  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
 
 /* ========================================= */
-/* NAVBAR (NEW UI/UX) */
+/* MOBILE NAVBAR FIX */
 /* ========================================= */
 
-/* Desktop Nav Link (Pill style - lebih modern) */
+/* Navbar Desktop Custom Style (Pill/Tab Look) */
 .nav-link-custom {
-    color: #343a40 !important; /* Dark text */
-    padding: 8px 15px;
-    border-radius: 50px; /* Pill shape */
-    transition: all 0.2s ease;
-    font-weight: 500;
-}
-.nav-link-custom:hover {
-    color: #145c32 !important; /* Darker hover text */
-    background-color: #e2f0e6; /* Light background on hover */
-}
-.nav-link-custom.active {
-    color: #ffffff !important; /* White text when active */
-    background-color: #198754; /* Success green background when active */
-    box-shadow: 0 4px 10px rgba(25, 135, 84, 0.4); /* Shadow for active pill */
-    font-weight: 600;
+  color: #198754; /* text-success */
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 50px; /* Bentuk pill */
+  transition: all 0.2s ease;
 }
 
-/* Mobile Bottom Navbar */
+.nav-link-custom:hover {
+  color: #fff;
+  background-color: #157347; /* Hover lebih gelap */
+}
+
+.nav-link-custom.active {
+  color: #fff;
+  background-color: #198754; /* Warna hijau solid untuk active */
+}
+
+/* Mobile Nav (Fixed Bottom) */
+.nav-mobile-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1050; /* Di atas konten tapi di bawah modal */
+  background-color: white;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+}
+
 .nav-link-mobile {
-    flex: 1; /* Distribute space evenly */
-    text-align: center;
-    color: #6c757d !important;
-    padding: 8px 0;
-    transition: all 0.2s ease;
-    text-decoration: none;
-    line-height: 1.2;
+  text-align: center;
+  padding: 8px 0;
+  color: #6c757d; /* text-muted */
+  text-decoration: none;
+  font-size: 0.75rem; /* Ukuran font kecil untuk mobile */
+  transition: color 0.2s ease;
 }
 
 .nav-link-mobile i {
-    font-size: 1.3rem; /* Ukuran icon */
-    margin-bottom: 2px;
+  font-size: 1.2rem;
+  display: block;
 }
 
-.nav-link-mobile.active-mobile {
-    color: #198754 !important; /* Active green color */
-    font-weight: bold;
-}
-
-/* Fix main content overlap with fixed bottom nav on mobile */
-@media (max-width: 991.98px) {
-  /* Hanya diterapkan di layar mobile (ukuran < lg) */
-  body {
-    padding-bottom: 65px; /* Memberi ruang di bawah main content agar tidak tertutup fixed bottom nav */
-  }
+.nav-link-mobile:hover, .nav-link-mobile.active-mobile {
+  color: #198754; /* text-success */
 }
 
 /* ========================================= */
-/* HOME PAGE SECTIONS */
-/* (Styles lainnya tetap dipertahankan) */
+/* SPLASH & LOADER */
 /* ========================================= */
 
-/* Hero Banner */
-.hero-banner {
-  height: 400px;
-  background: url('images/banner-default.jpeg') no-repeat center center/cover; /* Ganti dengan gambar banner utama Anda */
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hero-banner-overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.hero-banner-content {
-  position: relative;
-  z-index: 10;
-  padding: 0 15px;
-}
-
-/* Fasilitas Grid */
-.fasilitas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-.fasilitas-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    text-align: center;
-    transition: all 0.3s ease;
-}
-.fasilitas-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-.fasilitas-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* Testimoni Slider/Grid */
-.testimoni-slider {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-.testimoni-card {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    border-left: 5px solid #198754; /* Marker hijau */
-}
-.testimoni-card .quote {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-}
-.testimoni-card .name {
-    font-weight: bold;
-    color: #198754;
-    font-size: 1rem;
-}
-
-/* Tentang Kami - NEW PROFESSIONAL STYLE */
-.tentang-kami-card {
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column; /* Default for mobile */
-}
-
-.tentang-kami-img {
-    background: linear-gradient(135deg, #198754, #145c32);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-    position: relative;
-    overflow: hidden;
-}
-
-.tentang-kami-img::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: url('images/rs-pattern.png') repeat; /* Tambahkan pattern lembut jika ada */
-    opacity: 0.1;
-}
-
-.karumkit-photo-wrapper {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 5px solid #ffffff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    z-index: 2;
-}
-
-.karumkit-photo-wrapper img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
-/* Responsive adjustments */
-@media (min-width: 768px) {
-    .tentang-kami-card {
-        flex-direction: row; /* Desktop/Tablet: side-by-side */
-    }
-    .tentang-kami-img, .tentang-kami-content {
-        flex: 1;
-    }
-}
-
-
-/* ========================================= */
-/* GALERI CAROUSEL (Infinite Scroll) */
-/* ========================================= */
-
-.galeri-carousel {
-  overflow: hidden;
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  position: relative;
-  background-color: #fff;
-  border-color: #eee !important;
-}
-
-.galeri-track {
-  display: flex;
-  gap: 20px;
-  animation: scroll 35s linear infinite; 
-  padding: 10px 0;
-}
-
-.galeri-track img {
-  min-width: 300px;
-  width: 300px;
-  height: 200px;
-  border-radius: 8px;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.galeri-carousel:hover .galeri-track {
-    animation-play-state: paused;
-}
-
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } 
-}
-
-/* ========================================= */
-/* TIMELINE (Gaya untuk Informasi.blade.php) */
-/* ========================================= */
-
-.timeline-list {
-  position: relative;
-  padding-left: 2rem;
-  border-left: 3px solid #198754;
-  margin-top: 1.5rem;
-}
-
-.timeline-list > div {
-  position: relative;
-  margin-bottom: 2rem;
-  padding-left: 1rem;
-}
-
-.timeline-list .timeline-marker {
-  position: absolute;
-  top: 0.5rem;
-  left: -1.1rem;
-  width: 1rem;
-  height: 1rem;
-  background-color: #198754;
-  border-radius: 50%;
-  z-index: 1;
-  box-shadow: 0 0 0 4px #E6F4EA; 
-}
-
-.timeline-content h6 {
-  margin-bottom: 0.25rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #198754;
-}
-
-/* ========================================= */
-/* LOADER / SPLASH */
-/* ========================================= */
-
-#splash {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: linear-gradient(135deg, #198754, #145c32);
-  color: white;
-  z-index: 10000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Segoe UI', sans-serif;
-  text-align: center;
-  opacity: 1;
-  transition: opacity 0.8s ease;
-}
-
-#loader {
+#splash, #loader {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
@@ -331,8 +107,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   opacity: 1;
   transition: opacity 0.8s ease;
+}
+
+#loader .spinner-border {
+  width: 3rem;
+  height: 3rem;
 }
 
 #splash.fade-out, #loader.fade-out {
@@ -346,8 +128,8 @@ body {
 
   {{-- Splash Screen --}}
   <div id="splash">
-    <h1>RS Baladhika Husada</h1>
-    <p>Melayani dengan sepenuh hati...</p>
+    <h1 class="text-success">RS Baladhika Husada</h1>
+    <p class="text-muted">Melayani dengan sepenuh hati...</p>
   </div>
 
   {{-- Loader --}}
@@ -355,11 +137,12 @@ body {
     <div class="spinner-border text-success" role="status"></div>
   </div>
 
-  {{-- Navbar (Mengandung dua versi: desktop sticky top dan mobile fixed bottom) --}}
+  {{-- Navbar --}}
   @include('components.navbar')
 
   {{-- Main Content --}}
-  <main class="container py-5">
+  {{-- DIKOREKSI: Menghapus class="container" dan hanya menyisakan padding di main --}}
+  <main class="py-5">
     @yield('content')
   </main>
 
@@ -374,16 +157,29 @@ body {
   <script>
     AOS.init({ once: true, offset: 100, duration: 800 });
 
-    // Splash then Loader
-    window.addEventListener('load', function () {
-    setTimeout(() => {
-      document.getElementById('splash').classList.add('fade-out');
-    }, 500);
+    // Highlight active nav
+    document.querySelectorAll('.nav-link-custom').forEach(link => {
+      if (link.href === window.location.href) {
+        link.classList.add('active');
+      }
+    });
 
-    setTimeout(() => {
-      document.getElementById('loader').classList.add('fade-out');
-    }, 1500);
-  });
+    // Handle Splash Screen and Loader
+    window.addEventListener('load', function() {
+      // Hilangkan Splash Screen
+      const splash = document.getElementById('splash');
+      if (splash) {
+        splash.classList.add('fade-out');
+        setTimeout(() => splash.style.display = 'none', 800);
+      }
+      
+      // Hilangkan Loader
+      const loader = document.getElementById('loader');
+      if (loader) {
+        loader.classList.add('fade-out');
+        setTimeout(() => loader.style.display = 'none', 800);
+      }
+    });
   </script>
 </body>
 </html>

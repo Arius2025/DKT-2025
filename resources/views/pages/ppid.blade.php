@@ -56,10 +56,10 @@
       @php
         // PATH MENGGUNAKAN public/images/smile/ DAN EKSTENSI .jpg SESUAI FILE YANG DIUPLOAD
         $ikp_photos = [
-          ['src' => asset('images/smile/oktober25.jpg'), 'alt' => 'IKP Oktober 2025'],
-          ['src' => asset('images/smile/september25.jpg'), 'alt' => 'IKP September 2025'],
-          ['src' => asset('images/smile/agustus25.jpg'), 'alt' => 'IKP Agustus 2025'],
-          ['src' => asset('images/smile/juli25.jpg'), 'alt' => 'IKP Juli 2025'],
+          ['src' => asset('images/smile/oktober25.jpeg'), 'alt' => 'IKP Oktober 2025'],
+          ['src' => asset('images/smile/september25.jpeg'), 'alt' => 'IKP September 2025'],
+          ['src' => asset('images/smile/agustus25.jpeg'), 'alt' => 'IKP Agustus 2025'],
+          ['src' => asset('images/smile/juli25.jpeg'), 'alt' => 'IKP Juli 2025'],
         ];
       @endphp
 

@@ -1,6 +1,6 @@
 {{-- navbar.blade.php --}}
 
-{{-- 1. Desktop Navbar (Visible on Large screens and up) - Lebih Modern --}}
+{{-- 1. Desktop Navbar (Visible on Large screens and up) --}}
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg sticky-top d-none d-lg-block" data-aos="fade-down"> 
   <div class="container">
     <a class="navbar-brand fw-bold text-success" href="{{ route('home') }}">
@@ -26,13 +26,19 @@
         <li class="nav-item mx-1">
           <a class="nav-link-custom {{ request()->routeIs('zona') ? 'active' : '' }}" href="{{ route('zona') }}">Zona Integritas</a>
         </li>
+        {{-- Tombol Login --}}
+        <li class="nav-item ms-lg-3">
+            <a class="btn btn-outline-success btn-sm align-self-center fw-bold" href="/login">
+                <i class="bi bi-person-fill me-1"></i> Login
+            </a>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
 
-{{-- 2. Mobile Bottom Navbar (Visible below Large screens) --}}
-<nav class="navbar fixed-bottom bg-white shadow-lg d-lg-none" data-aos="fade-up">
+{{-- 2. Mobile Navbar (Fixed Bottom) - Visible on Small/Medium screens --}}
+<nav class="nav-mobile-fixed d-lg-none">
     <div class="container-fluid">
         <div class="d-flex justify-content-around w-100">
             
@@ -59,7 +65,7 @@
             
             <a class="nav-link-mobile {{ request()->routeIs('zona') ? 'active-mobile' : '' }}" href="{{ route('zona') }}">
                 <i class="bi bi-star-fill"></i>
-                <span class="small d-block">Z. Integritas</span>
+                <span class="small d-block">Zona Int.</span>
             </a>
         </div>
     </div>
